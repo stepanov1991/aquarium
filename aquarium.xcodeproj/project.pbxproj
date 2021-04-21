@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		CE0AEE8C261F6AEE0030C1EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0AEE8B261F6AEE0030C1EC /* AppDelegate.swift */; };
 		CE0AEE8E261F6AEE0030C1EC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0AEE8D261F6AEE0030C1EC /* SceneDelegate.swift */; };
-		CE0AEE90261F6AEE0030C1EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0AEE8F261F6AEE0030C1EC /* ViewController.swift */; };
+		CE0AEE90261F6AEE0030C1EC /* AquariumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0AEE8F261F6AEE0030C1EC /* AquariumViewController.swift */; };
 		CE0AEE93261F6AEE0030C1EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0AEE91261F6AEE0030C1EC /* Main.storyboard */; };
 		CE0AEE95261F6AF10030C1EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE0AEE94261F6AF10030C1EC /* Assets.xcassets */; };
 		CE0AEE98261F6AF10030C1EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0AEE96261F6AF10030C1EC /* LaunchScreen.storyboard */; };
+		CE0AEEA5261F6D1C0030C1EC /* Fish.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0AEEA4261F6D1C0030C1EC /* Fish.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CE0AEE88261F6AEE0030C1EC /* aquarium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = aquarium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0AEE8B261F6AEE0030C1EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE0AEE8D261F6AEE0030C1EC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE0AEE8F261F6AEE0030C1EC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE0AEE8F261F6AEE0030C1EC /* AquariumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AquariumViewController.swift; sourceTree = "<group>"; };
 		CE0AEE92261F6AEE0030C1EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE0AEE94261F6AF10030C1EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE0AEE97261F6AF10030C1EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE0AEE99261F6AF10030C1EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE0AEEA4261F6D1C0030C1EC /* Fish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fish.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,40 @@
 		CE0AEE8A261F6AEE0030C1EC /* aquarium */ = {
 			isa = PBXGroup;
 			children = (
+				CE0AEEA2261F6CE80030C1EC /* Controller */,
+				CE0AEEA1261F6CDE0030C1EC /* View */,
+				CE0AEEA0261F6CD50030C1EC /* Model */,
 				CE0AEE8B261F6AEE0030C1EC /* AppDelegate.swift */,
 				CE0AEE8D261F6AEE0030C1EC /* SceneDelegate.swift */,
-				CE0AEE8F261F6AEE0030C1EC /* ViewController.swift */,
-				CE0AEE91261F6AEE0030C1EC /* Main.storyboard */,
 				CE0AEE94261F6AF10030C1EC /* Assets.xcassets */,
 				CE0AEE96261F6AF10030C1EC /* LaunchScreen.storyboard */,
 				CE0AEE99261F6AF10030C1EC /* Info.plist */,
 			);
 			path = aquarium;
+			sourceTree = "<group>";
+		};
+		CE0AEEA0261F6CD50030C1EC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE0AEEA4261F6D1C0030C1EC /* Fish.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE0AEEA1261F6CDE0030C1EC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE0AEE91261F6AEE0030C1EC /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE0AEEA2261F6CE80030C1EC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CE0AEE8F261F6AEE0030C1EC /* AquariumViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +164,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE0AEE90261F6AEE0030C1EC /* ViewController.swift in Sources */,
+				CE0AEE90261F6AEE0030C1EC /* AquariumViewController.swift in Sources */,
 				CE0AEE8C261F6AEE0030C1EC /* AppDelegate.swift in Sources */,
 				CE0AEE8E261F6AEE0030C1EC /* SceneDelegate.swift in Sources */,
+				CE0AEEA5261F6D1C0030C1EC /* Fish.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
